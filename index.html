@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID - PROYECTO</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="nav container">
+
+        <a class="nav__figure" href="#"">
+            <img src="./assets/logo.svg" class="nav__img">
+        </a>
+
+        <ul class="nav__menu">
+
+            <li class="nav__list">
+                <a href="#" class="nav__link">Mercury</a>
+            </li>
+
+            <li class="nav__list">
+                <a href="#" class="nav__link">Venus</a>
+            </li>
+
+            <li class="nav__list">
+                <a href="#" class="nav__link">Earth</a>
+            </li>
+
+            <li class="nav__list">
+                <a href="#" class="nav__link">Marth</a>
+            </li>
+
+        </ul> 
+
+        <label for="menu" class="nav__label nav__label--open">
+            <img src="./assets/menu.svg" class="nav__icon">
+        </label>
+        
+        <label for="menu" class="nav__label nav__label--close">
+            <img src="./assets/close.svg" class="nav__icon">
+        </label>
+
+        <input type="checkbox" id="menu">
+
+    </nav>
+
+    <main class="main container">
+
+        <section class="main__section">
+
+            <article class="main__texts">
+                <h1 class="main__title">Tierra.</h1>
+                <p class="main__paragraph">La Tierra interactúa gravitatoriamente con otros objetos en el espacio, especialmente el Sol y la Luna. En la actualidad, la Tierra completa una órbita alrededor del Sol cada vez que realiza 366,26 giros sobre su eje, lo cual es equivalente a 365,26 días solares o un año sideral.</p>
+            </article>
+
+            <figure>
+                <img src="./assets/earth.svg" >
+            </figure>
+
+        </section>
+        
+        <section class="cards">
+            
+            <article class="cards__item">
+                <h2 class="cards__title">Rotation Time</h2>
+                <p class="cards__info">0.99 days</p>
+            </article>
+
+            <article class="cards__item">
+                <h2 class="cards__title">Revolution Time</h2>
+                <p class="cards__info">365 days</p>
+            </article>
+
+            <article class="cards__item">
+                <h2 class="cards__title">Radius</h2>
+                <p class="cards__info">3670 KM</p>
+            </article>
+
+            <article class="cards__item">
+                <h2 class="cards__title">Average Time</h2>
+                <p class="cards__info">16&deg; C</p>
+            </article>
+
+        </section>
+
+    </main>
+   
+    
+</body>
+</html>

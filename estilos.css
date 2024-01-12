@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-main: #070623;
+    --bg-menu: royalblue;
+    --color-text: white;
+}
+
+body{
+    color: var(--color-text);
+    background-color: var(--bg-main);
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
