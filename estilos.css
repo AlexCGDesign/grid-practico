@@ -5,6 +5,7 @@
 
 :root{
     --bg-main: #070623;
+
     --bg-menu: royalblue;
     --color-text: white;
 }
@@ -20,4 +21,154 @@ body{
     max-width: 1200px;
     overflow: hidden;
     margin: 0 auto;
+}
+
+
+.nav{
+    --menu-mostrar: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    --opacidad-abrir: 1;
+    --puntero-abrir: unset;
+
+    --opacidad-cerrar: 0;
+    --puntero-cerrar: none;
+
+
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: max-content max-content;
+    grid-template-areas: 
+    "logo menu";
+    align-items: center;
+
+    height: 100px;
+}
+
+.nav:has( :checked ){
+    
+    --menu-mostrar: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    --opacidad-abrir: 0;
+    --puntero-abrir: none;
+
+    --opacidad-cerrar: 1;
+    --puntero-cerrar: unset;
+
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.nav__menu{
+    padding: 0;
+    list-style: none;
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg-menu);
+
+    display: grid;
+    gap: 1rem;
+    place-content: center;
+    text-align: center;
+
+    clip-path: var(--menu-mostrar);
+
+    transition: clip-path .5s;
+}
+
+.nav__img{
+    display: block;
+    width: 150px;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.nav__label{
+    grid-area: menu;
+    z-index: 100;
+
+    transition: .4s opacity;
+}
+
+.nav__label--open{
+    opacity: var(--opacidad-abrir);
+    pointer-events: var(--puntero-abrir);
+}
+
+.nav__label--close{
+    opacity: var(--opacidad-cerrar);
+    pointer-events: var(--puntero-cerrar);
+}
+
+.nav__icon{
+    width: 40px;
+}
+
+/* Main */
+
+
+.main__section{
+    display: grid;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.main__texts{
+    order: 1;
+}
+
+.main__title{
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 4px;
+}
+
+.main__paragraph{
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+
+.main__img{
+    width: 100%;
+}
+
+/* Cards */
+
+.cards{
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    gap: 2rem;
+}
+
+.cards__item{
+    padding: 2rem 1.5rem;
+    border: 2px solid ;
+    color: #b8b0b0;
+}
+
+.cards__title{
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: .6rem;
+}
+
+.cards__info{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+@media (width > 768px) {
+    
+    .main__section{
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
